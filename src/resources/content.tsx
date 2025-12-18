@@ -1,15 +1,15 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Mario",
+  lastName: "Montcho",
+  name: "Mario Montcho",
+  role: "Applied AI Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "montchomar@gmail.com",
+  location: "America/Montreal", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "French"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -25,13 +25,13 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/Mario-mto",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/mario-montcho-241598212/",
     essential: true,
   },
   {
@@ -60,12 +60,12 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Designing practical AI systems</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">AI Engineer</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -76,8 +76,8 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+    I’m Mario, a machine learning engineer working with <Text as="span" size="xl" weight="strong">Python & AI</Text>, 
+building <br /> scalable, real-world solutions.</>
   ),
 };
 
@@ -102,127 +102,187 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I’m an AI consultant and machine learning engineer passionate about turning complex business problems into clear,
+         practical solutions. My work spans data pipelines, predictive models, and production-ready AI systems.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "SaaS Housing Platform (Confidential)",
+        timeframe: "2024 - Present",
+        role: "AI & Technical–Functional Consultant",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            <span key="pricing-engine">Pricing Recommendation Engine</span>{" "}
+            Designed and implemented a machine learning model to predict optimal rental prices
+            based on location, neighborhood trends, and historical similarities.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            <span key="ml-pipeline">End-to-End ML Pipeline</span>{" "}
+            Built a complete pipeline including data preprocessing, feature engineering,
+            GridSearchCV optimization, and RandomForest/XGBoost modeling.
+          </>,
+          <>
+            <span key="deployment">Production Deployment</span>{" "}
+            Deployed the model as a FastAPI service integrated into the client’s CRM,
+            with monitoring and feedback loops.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            src: "/images/projects/pricing-engine/architecture.jpg",
+            alt: "AI pricing engine architecture",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Medical Imaging Research Project",
+        timeframe: "2024 - 2025",
+        role: "Python Developer — Medical Imaging",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            <span key="automation">Python Automation</span>{" "}
+            Developed Python scripts to automatically extract morphological measurements
+            (length, width, circumference, volume) from 3D medical images and segmentations.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            <span key="reproducibility">Measurement Reproducibility</span>{" "}
+            Implemented repeatability and reproducibility analyses to ensure reliable
+            and consistent measurements across subjects and acquisitions.
+          </>,
+          <>
+            <span key="tooling">Tool Integration</span>{" "}
+            Integrated Python workflows with 3D Slicer to visualize results,
+            validate bounding boxes, and support expert review.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: "/images/projects/medical-imaging/bounding-box.jpg",
+            alt: "3D bounding box on medical image",
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "École de Technologie Supérieure (ÉTS) — Montréal",
+        description: (
+          <>
+            Master’s degree in Software Engineering with a focus on applied machine learning,
+            data processing, and production-ready systems.
+          </>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "INSA Group / ESITECH Rouen",
+        description: (
+          <>
+            Master’s degree in Physics Engineering, providing a strong foundation
+            in mathematical modeling, data analysis, and scientific computing.
+          </>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: true,
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
+        title: "AI Strategy, LLMs & Prompt Engineering",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Designing AI-driven solutions by combining large language models,
+            structured prompting, and strategic thinking to solve real business problems.
+          </>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "LLMs", icon: "sparkles" },
+          { name: "Prompt Engineering", icon: "message-square" },
+          { name: "AI Strategy", icon: "target" },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            src: "/images/skills/llm/strategy.jpg",
+            alt: "AI strategy and LLM workflow",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
+        title: "Python, Data & Machine Learning",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Advanced Python development for data analysis, visualization,
+            machine learning, and automation across research and production projects.
+          </>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Python", icon: "python" },
+          { name: "NumPy", icon: "numpy" },
+          { name: "Pandas", icon: "pandas" },
+          { name: "Scikit-learn", icon: "scikit" },
+          { name: "XGBoost", icon: "xgboost" },
+          { name: "Seaborn", icon: "chart" },
+          { name: "Matplotlib", icon: "chart" },
         ],
-        // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            src: "/images/skills/python/data-viz.jpg",
+            alt: "Data visualization with Python",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Backend & API Engineering",
+        description: (
+          <>
+            Building scalable backend services and APIs to expose data pipelines,
+            machine learning models, and business logic.
+          </>
+        ),
+        tags: [
+          { name: "FastAPI", icon: "fastapi" },
+          { name: "PostgreSQL", icon: "postgresql" },
+          { name: "Docker", icon: "docker" },
+        ],
+        images: [],
+      },
+      {
+        title: "Frontend Development",
+        description: (
+          <>
+            Developing modern, responsive user interfaces with a focus on usability,
+            performance, and clean design systems.
+          </>
+        ),
+        tags: [
+          { name: "TypeScript", icon: "typescript" },
+          { name: "React", icon: "react" },
+          { name: "Next.js", icon: "nextjs" },
+          { name: "CSS", icon: "css" },
+          { name: "Tailwind CSS", icon: "tailwind" },
+        ],
+        images: [
+          {
+            src: "/images/skills/frontend/ui.jpg",
+            alt: "Frontend user interface",
             width: 16,
             height: 9,
           },

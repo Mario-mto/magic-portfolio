@@ -1,0 +1,56 @@
+---
+title: "Automated Morphological Analysis from Medical Images"
+publishedAt: "2024-06-20"
+summary: "Developed Python tooling to automate morphological measurements from 3D medical images and segmentations, improving repeatability and analysis efficiency."
+images:
+  - "/images/projects/health-technology/cover-01.jpg"
+  - "/images/projects/health-technology/cover-02.jpg"
+  - "/images/projects/health-technology/cover-03.jpg"
+team:
+  - name: "Mario Montcho"
+    role: "Python Developer — Medical Imaging"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/your-linkedin/"
+---
+
+{/* 
+IMAGES À METTRE (recommandées)
+- cover-01.jpg : capture 3D Slicer (segmentation + bounding box) (anonymisée)
+- cover-02.jpg : overlay / visuel mesures (length/width/volume) ou bounding box “validée”
+- cover-03.jpg : graphes reproductibilité (boxplots / scatter) + distribution erreurs
+*/}
+
+## Overview
+
+This project focused on automating morphological measurements from 3D medical images using Python.  
+The objective was to replace manual, time-consuming measurements with reliable and reproducible computational workflows, while keeping expert validation through visual review.
+
+## Key Features
+
+- **Automated Measurement Extraction**  
+  Built Python scripts to compute metrics such as length, width, circumference, and volume from 3D segmentations.
+
+- **Repeatability & Reproducibility Analysis**  
+  Implemented analysis workflows to quantify measurement consistency across repeated runs and subjects.
+
+- **Tool Integration for Visual Validation**  
+  Integrated scripting with 3D Slicer to visualize outputs, validate bounding boxes, and support expert review.
+
+- **Structured Outputs for Analysis**  
+  Exported clean datasets suitable for downstream statistics and reporting.
+
+## Technologies Used
+
+- **Python**, **NumPy**, **Pandas**
+- **Matplotlib**, **Seaborn**
+- **3D Slicer (Python API)**, **VTK**
+
+## Challenges and Learnings
+
+Ensuring anatomical relevance required careful handling of reference frames and systematic visual verification.  
+This project reinforced best practices around robust Python code in research-critical contexts: reproducibility, traceability, and validation loops.
+
+## Outcome
+
+The automation significantly reduced manual measurement time while improving consistency and transparency.  
+The workflow scales to larger datasets and provides a strong base for future extensions such as statistical modeling or ML-based analysis.

@@ -1,0 +1,59 @@
+---
+title: "AI-Powered Rental Pricing for a Housing SaaS"
+publishedAt: "2024-09-15"
+summary: "Built a machine learning pricing engine to estimate optimal rental prices using location signals, neighborhood trends, and historical similarities."
+images:
+  - "/images/projects/saas-housing/cover-01.jpg"
+  - "/images/projects/saas-housing/cover-02.jpg"
+  - "/images/projects/saas-housing/cover-03.jpg"
+  - "/images/projects/saas-housing/cover-04.jpg"
+team:
+  - name: "Mario Montcho"
+    role: "AI & Technical–Functional Consultant"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/your-linkedin/"
+---
+
+{/* 
+IMAGES À METTRE (recommandées)
+- cover-01.jpg : schéma architecture (Data → ML → API → CRM)
+- cover-02.jpg : pipeline ML (preprocess → features → model)
+- cover-03.jpg : plot “Pred vs Actual” + erreurs (MAE/RMSE)
+- cover-04.jpg : FastAPI Swagger UI (/docs) ou exemple de réponse JSON
+*/}
+
+## Overview
+
+This project focuses on designing and delivering an AI-driven pricing engine for a housing SaaS platform.  
+The goal was to help housing professionals estimate fair and competitive rental prices using data, while keeping the solution deployable and easy to integrate into existing workflows.
+
+## Key Features
+
+- **Pricing Recommendation Engine**  
+  Built a supervised regression model to estimate rental prices using location features, neighborhood signals, and historical listings.
+
+- **End-to-End ML Pipeline**  
+  Implemented preprocessing, feature engineering, training, GridSearchCV tuning, and evaluation to ensure robust and reproducible results.
+
+- **API-First Delivery**  
+  Exposed predictions through a FastAPI endpoint so the engine could be integrated into client tools (CRM / internal dashboards).
+
+- **Business-Ready Outputs**  
+  Focused on clear outputs (recommended price + context) that can be understood by non-technical stakeholders.
+
+## Technologies Used
+
+- **Python**, **Pandas**, **NumPy**
+- **Scikit-learn**, **XGBoost**, **Random Forest**
+- **Seaborn**, **Matplotlib**
+- **FastAPI**, **Docker**
+
+## Challenges and Learnings
+
+A key challenge was balancing performance with trust: the model needed strong accuracy, but recommendations also had to remain consistent and explainable for business users.  
+Data quality was also critical: handling missing values, validating inputs, and preventing leakage had a major impact on stability.
+
+## Outcome
+
+The pricing engine reduced manual pricing effort and improved consistency across listings.  
+Its modular design supports future improvements such as retraining, adding new neighborhood signals, and integrating user feedback for continuous iteration.
