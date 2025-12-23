@@ -1,4 +1,13 @@
-import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Work,
+} from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -76,8 +85,12 @@ const home: Home = {
   },
   subline: (
     <>
-    I’m Mario, a machine learning engineer working with <Text as="span" size="xl" weight="strong">Python & AI</Text>, 
-building <br /> scalable, real-world solutions.</>
+      I’m Mario, a machine learning engineer working with{" "}
+      <Text as="span" size="xl" weight="strong">
+        Python & AI
+      </Text>
+      , building <br /> scalable, real-world solutions.
+    </>
   ),
 };
 
@@ -102,8 +115,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        I’m an AI consultant and machine learning engineer passionate about turning complex business problems into clear,
-         practical solutions. My work spans data pipelines, predictive models, and production-ready AI systems.
+        I’m an AI consultant and machine learning engineer passionate about
+        turning complex business problems into clear, practical solutions. My
+        work spans data pipelines, predictive models, and production-ready AI
+        systems.
       </>
     ),
   },
@@ -117,24 +132,25 @@ const about: About = {
         role: "AI & Technical–Functional Consultant",
         achievements: [
           <>
-            <span key="pricing-engine">Pricing Recommendation Engine</span>{" "}
-            Designed and implemented a machine learning model to predict optimal rental prices
-            based on location, neighborhood trends, and historical similarities.
+            <strong key="pricing-engine">Pricing Recommendation Engine</strong>{" "}
+            Designed and implemented a machine learning model to predict optimal
+            rental prices based on location, neighborhood trends, and historical
+            similarities.
           </>,
           <>
-            <span key="ml-pipeline">End-to-End ML Pipeline</span>{" "}
-            Built a complete pipeline including data preprocessing, feature engineering,
+            <strong key="ml-pipeline">End-to-End ML Pipeline</strong> Built a
+            complete pipeline including data preprocessing, feature engineering,
             GridSearchCV optimization, and RandomForest/XGBoost modeling.
           </>,
           <>
-            <span key="deployment">Production Deployment</span>{" "}
-            Deployed the model as a FastAPI service integrated into the client’s CRM,
-            with monitoring and feedback loops.
+            <strong key="deployment">Production Deployment</strong> Deployed the
+            model as a FastAPI service integrated into the client’s CRM, with
+            monitoring and feedback loops.
           </>,
         ],
         images: [
           {
-            src: "/images/projects/pricing-engine/architecture.jpg",
+            src: "/images/projects/housing-pricing/pipeline_house_prediction.png",
             alt: "AI pricing engine architecture",
             width: 16,
             height: 9,
@@ -147,24 +163,26 @@ const about: About = {
         role: "Python Developer — Medical Imaging",
         achievements: [
           <>
-            <span key="automation">Python Automation</span>{" "}
-            Developed Python scripts to automatically extract morphological measurements
-            (length, width, circumference, volume) from 3D medical images and segmentations.
+            <strong key="automation">Python Automation</strong> Developed Python
+            scripts to automatically extract morphological measurements (length,
+            width, circumference, volume) from 3D medical images and
+            segmentations.
           </>,
           <>
-            <span key="reproducibility">Measurement Reproducibility</span>{" "}
-            Implemented repeatability and reproducibility analyses to ensure reliable
-            and consistent measurements across subjects and acquisitions.
+            <strong key="reproducibility">Measurement Reproducibility</strong>{" "}
+            Implemented repeatability and reproducibility analyses to ensure
+            reliable and consistent measurements across subjects and
+            acquisitions.
           </>,
           <>
-            <span key="tooling">Tool Integration</span>{" "}
-            Integrated Python workflows with 3D Slicer to visualize results,
-            validate bounding boxes, and support expert review.
+            <strong key="tooling">Tool Integration</strong> Integrated Python
+            workflows with 3D Slicer to visualize results, validate bounding
+            boxes, and support expert review.
           </>,
         ],
         images: [
           {
-            src: "/images/projects/medical-imaging/bounding-box.jpg",
+            src: "/images/projects/medical-imaging/bounding_box.png",
             alt: "3D bounding box on medical image",
             width: 16,
             height: 9,
@@ -181,8 +199,8 @@ const about: About = {
         name: "École de Technologie Supérieure (ÉTS) — Montréal",
         description: (
           <>
-            Master’s degree in Software Engineering with a focus on applied machine learning,
-            data processing, and production-ready systems.
+            Master’s degree in Software Engineering with a focus on applied
+            machine learning, data processing, and production-ready systems.
           </>
         ),
       },
@@ -190,8 +208,9 @@ const about: About = {
         name: "INSA Group / ESITECH Rouen",
         description: (
           <>
-            Master’s degree in Physics Engineering, providing a strong foundation
-            in mathematical modeling, data analysis, and scientific computing.
+            Master’s degree in Physics Engineering, providing a strong
+            foundation in mathematical modeling, data analysis, and scientific
+            computing.
           </>
         ),
       },
@@ -206,7 +225,8 @@ const about: About = {
         description: (
           <>
             Designing AI-driven solutions by combining large language models,
-            structured prompting, and strategic thinking to solve real business problems.
+            structured prompting, and strategic thinking to solve real business
+            problems.
           </>
         ),
         tags: [
@@ -214,21 +234,14 @@ const about: About = {
           { name: "Prompt Engineering", icon: "message-square" },
           { name: "AI Strategy", icon: "target" },
         ],
-        images: [
-          {
-            src: "/images/skills/llm/strategy.jpg",
-            alt: "AI strategy and LLM workflow",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
         title: "Python, Data & Machine Learning",
         description: (
           <>
             Advanced Python development for data analysis, visualization,
-            machine learning, and automation across research and production projects.
+            machine learning, and automation across research and production
+            projects.
           </>
         ),
         tags: [
@@ -240,21 +253,13 @@ const about: About = {
           { name: "Seaborn", icon: "chart" },
           { name: "Matplotlib", icon: "chart" },
         ],
-        images: [
-          {
-            src: "/images/skills/python/data-viz.jpg",
-            alt: "Data visualization with Python",
-            width: 16,
-            height: 9,
-          },
-        ],
       },
       {
         title: "Backend & API Engineering",
         description: (
           <>
-            Building scalable backend services and APIs to expose data pipelines,
-            machine learning models, and business logic.
+            Building scalable backend services and APIs to expose data
+            pipelines, machine learning models, and business logic.
           </>
         ),
         tags: [
@@ -268,8 +273,8 @@ const about: About = {
         title: "Frontend Development",
         description: (
           <>
-            Developing modern, responsive user interfaces with a focus on usability,
-            performance, and clean design systems.
+            Developing modern, responsive user interfaces with a focus on
+            usability, performance, and clean design systems.
           </>
         ),
         tags: [
@@ -281,7 +286,7 @@ const about: About = {
         ],
         images: [
           {
-            src: "/images/skills/frontend/ui.jpg",
+            src: "/images/projects/sites_UI_UX/site4.png",
             alt: "Frontend user interface",
             width: 16,
             height: 9,
