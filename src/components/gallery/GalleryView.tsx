@@ -1,23 +1,16 @@
 "use client";
 
-import { Media, MasonryGrid } from "@once-ui-system/core";
-import { gallery } from "@/resources";
+import { Column, Heading, Text } from "@once-ui-system/core";
 
 export default function GalleryView() {
   return (
-    <MasonryGrid columns={2} s={{ columns: 1 }}>
-      {gallery.images.map((image, index) => (
-        <Media
-          enlarge
-          priority={index < 10}
-          sizes="(max-width: 560px) 100vw, 50vw"
-          key={index}
-          radius="m"
-          aspectRatio={image.orientation === "horizontal" ? "16 / 9" : "3 / 4"}
-          src={image.src}
-          alt={image.alt}
-        />
-      ))}
-    </MasonryGrid>
+    <Column padding="xl" horizontal="center" align="center">
+      <Heading as="h1" variant="display-strong-m">
+        Gallery is no longer available
+      </Heading>
+      <Text variant="body-default-m" onBackground="neutral-weak" marginTop="12">
+        This section has been removed from the portfolio.
+      </Text>
+    </Column>
   );
 }

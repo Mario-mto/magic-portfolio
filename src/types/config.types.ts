@@ -121,6 +121,7 @@ export type EffectsConfig = {
 
 /**
  * Mailchimp configuration for newsletter forms.
+ * (Kept for potential future use; not used in the current UI.)
  */
 export type MailchimpConfig = {
   action: string;
@@ -142,7 +143,6 @@ export type SchemaConfig = {
  * Social links for organization.
  */
 export type SameAsConfig = {
-  threads: string;
   linkedin: string;
   discord: string;
 };
