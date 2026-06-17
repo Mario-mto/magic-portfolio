@@ -1,0 +1,10 @@
+.section { padding: var(--s8) 0; }
+.h { margin-bottom: var(--s6); }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s4); }
+.card { border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--s5);
+  background: var(--bg-elev); transition: border-color .2s, background .2s; }
+.card:hover { border-color: var(--accent); background: var(--bg-elev-2); }
+.title { font-size: 1.15rem; margin-bottom: var(--s3); }
+.desc { color: var(--text-dim); font-size: 0.9rem; margin-bottom: var(--s4); }
+.tags { display: flex; flex-wrap: wrap; gap: var(--s2); }
+@media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
