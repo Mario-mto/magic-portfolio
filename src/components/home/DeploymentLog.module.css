@@ -1,0 +1,10 @@
+.section { padding: var(--s8) 0; }
+.h { margin-bottom: var(--s6); }
+.log { border-left: 1px solid var(--border-strong); }
+.row { display: grid; grid-template-columns: 130px 1fr; gap: var(--s4); padding: var(--s4) var(--s5);
+  position: relative; }
+.row::before { content: ""; position: absolute; left: -4px; top: var(--s5); width: 7px; height: 7px;
+  border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+.time { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); text-transform: uppercase; }
+.role { font-size: 1rem; }
+@media (max-width: 640px) { .row { grid-template-columns: 1fr; } }
