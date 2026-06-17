@@ -19,6 +19,11 @@ type Metadata = {
   tag?: string;
   team: Team[];
   link?: string;
+  domain?: "ml" | "medical" | "saas" | "frontend";
+  badge?: "deployed" | "live" | "research" | "design";
+  metric?: string;
+  featured?: boolean;
+  order?: number;
 };
 
 import { notFound } from "next/navigation";
@@ -49,6 +54,11 @@ function readMDXFile(filePath: string) {
     tag: data.tag || [],
     team: data.team || [],
     link: data.link || "",
+    domain: data.domain,
+    badge: data.badge,
+    metric: data.metric || "",
+    featured: data.featured ?? false,
+    order: data.order ?? 0,
   };
 
   return { metadata, content };
