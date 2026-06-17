@@ -1,0 +1,5 @@
+.cursor { position: fixed; top: 0; left: 0; width: 14px; height: 14px; border-radius: 50%;
+  border: 1px solid var(--accent); margin: -7px 0 0 -7px; pointer-events: none; z-index: 9998;
+  transition: width .2s, height .2s, background .2s; mix-blend-mode: difference; }
+.hover { width: 36px; height: 36px; margin: -18px 0 0 -18px; background: rgba(94, 234, 212, 0.12); }
+@media (pointer: coarse) { .cursor { display: none; } }
