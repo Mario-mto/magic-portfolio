@@ -1,0 +1,7 @@
+.section { padding: var(--s9) 0; }
+.manifesto { font-size: clamp(1.4rem, 4vw, 2.4rem); font-weight: 500; line-height: 1.25; max-width: 18ch; }
+.manifesto em { color: var(--accent); font-style: normal; }
+.stats { display: flex; flex-wrap: wrap; gap: var(--s7); margin-top: var(--s6); }
+.stat { display: flex; flex-direction: column; gap: 4px; }
+.num { font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; color: var(--accent); letter-spacing: -0.02em; }
+.marquee { margin-top: var(--s6); }
