@@ -1,0 +1,15 @@
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px var(--gutter);
+  font-family: var(--font-mono); text-transform: uppercase;
+  font-size: 0.7rem; letter-spacing: 0.14em; color: var(--text-dim);
+  mix-blend-mode: difference;
+}
+.logo { color: var(--text); font-weight: 700; }
+.logo span { color: var(--accent); }
+.nav { display: flex; gap: 26px; }
+.nav a:hover { color: var(--accent); }
+.status { display: flex; align-items: center; gap: 7px; }
+.status i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+@media (max-width: 640px) { .nav { display: none; } }

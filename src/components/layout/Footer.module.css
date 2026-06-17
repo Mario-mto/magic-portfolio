@@ -1,0 +1,7 @@
+.footer {
+  display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;
+  padding: 40px var(--gutter); border-top: 1px solid var(--border);
+  font-size: 0.8rem; color: var(--text-faint);
+}
+.footer nav { display: flex; gap: 18px; }
+.footer a:hover { color: var(--accent); }
