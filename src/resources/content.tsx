@@ -1,5 +1,4 @@
 import type { About, Home, Person, Social, Work } from "@/types";
-import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Mario",
@@ -51,24 +50,13 @@ const home: Home = {
   headline: <>Designing practical AI systems</>,
   featured: {
     display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">AI Engineer</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
+    title: "Featured work",
     href: "/work",
   },
   subline: (
     <>
-      I’m Mario, a machine learning engineer working with{" "}
-      <Text as="span" size="xl" weight="strong">
-        Python & AI
-      </Text>
-      , building <br /> scalable, real-world solutions.
+      I’m Mario, a machine learning engineer working with <strong>Python &amp; AI</strong>,
+      building scalable, real-world solutions.
     </>
   ),
 };
