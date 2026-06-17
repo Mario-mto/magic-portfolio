@@ -21,6 +21,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
       <body>
+        {/* Transitional: <Providers> bridges the not-yet-migrated Once UI pages
+            (they call useLayout). Removed in teardown (Task 5.2) once all pages are custom. */}
         <Providers>
           <SmoothScroll>
             <MagneticCursor />

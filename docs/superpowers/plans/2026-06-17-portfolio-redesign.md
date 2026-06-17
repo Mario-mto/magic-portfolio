@@ -2236,6 +2236,8 @@ git rm --ignore-unmatch \
   src/components/gallery/GalleryView.tsx
 ```
 
+> **Also remove the transitional `<Providers>` bridge** added in Task 0.8: delete the `import { Providers } from "@/components/Providers";` line and the `<Providers>…</Providers>` wrapper from `src/app/layout.tsx` (children render directly inside `<SmoothScroll>`). By this point all pages are custom, so the Once UI `LayoutProvider` context is no longer needed.
+
 - [ ] **Step 6: Remove orphaned/empty template route + component dirs** (stale routes must not ship)
 
 ```bash
