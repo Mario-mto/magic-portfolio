@@ -1,0 +1,4 @@
+.wrap { overflow: hidden; width: 100%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.track { display: flex; gap: 14px; width: max-content; }
+.item { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dim);
+  border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; white-space: nowrap; }
