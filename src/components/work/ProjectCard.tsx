@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "@/components/ui/Badge";
-import type { Project } from "@/lib/projects";
+import type { Project } from "@/lib/projects-utils";
 import styles from "./ProjectCard.module.css";
 
 export function ProjectCard({ project }: { project: Project }) {

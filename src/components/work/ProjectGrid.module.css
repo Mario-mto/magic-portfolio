@@ -1,0 +1,8 @@
+.filters { display: flex; flex-wrap: wrap; gap: var(--s2); margin: var(--s7) 0 var(--s6); }
+.filter { font-family: var(--font-mono); text-transform: uppercase; font-size: 0.72rem; letter-spacing: 0.1em;
+  color: var(--text-dim); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; transition: all .2s; }
+.filter:hover { border-color: var(--border-strong); }
+.active { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s4); padding-bottom: var(--s9); }
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
