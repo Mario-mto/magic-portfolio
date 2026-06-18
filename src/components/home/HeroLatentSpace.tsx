@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useReducedMotion } from "@/lib/useReducedMotion";
 import { ScrambleText } from "@/components/ui/ScrambleText";
-import { home } from "@/resources";
+import { useLang, tr } from "@/lib/i18n";
+import { site } from "@/resources/site";
 import styles from "./HeroLatentSpace.module.css";
 
 interface Point { x: number; y: number; bx: number; by: number; r: number; c: string; slug?: string; label?: string; }
@@ -13,6 +14,8 @@ const HIT = 18; // px radius to register a project-point hover/click
 export function HeroLatentSpace({ projects }: { projects: { slug: string; title: string }[] }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reduced = useReducedMotion();
+  const { lang } = useLang();
+  const t = site.hero.title[lang];
   const router = useRouter();
   const hovered = useRef<Point | null>(null);
 
@@ -102,13 +105,13 @@ export function HeroLatentSpace({ projects }: { projects: { slug: string; title:
       <canvas ref={canvasRef} className={styles.canvas} />
       <div className={styles.glow} aria-hidden="true" />
       <div className={`container ${styles.inner}`}>
-        <div className={`mono ${styles.eyebrow}`}>Applied AI Engineer · Montréal · ● Available</div>
+        <div className={`mono ${styles.eyebrow}`}>{tr(lang, site.hero.eyebrow)} · Montréal · ● {tr(lang, site.person.availability)}</div>
         <h1 className={styles.title}>
-          Designing practical <ScrambleText text="AI systems" as="span" className={styles.stroke} /> that ship.
+          {t.pre}<ScrambleText text={t.accent} as="span" className={styles.stroke} />{t.post}
         </h1>
-        <p className={styles.sub}>{home.subline}</p>
+        <p className={styles.sub}>{tr(lang, site.hero.subline)}</p>
       </div>
-      <Link href="/work" className={`mono ${styles.cue}`}>Scroll ↓</Link>
+      <Link href="/work" className={`mono ${styles.cue}`}>{tr(lang, site.hero.scroll)} ↓</Link>
       <ul className={styles.srLinks} aria-label="Projects">
         {projects.map((p) => (<li key={p.slug}><Link href={`/work/${p.slug}`}>{p.title}</Link></li>))}
       </ul>
