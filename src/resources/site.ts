@@ -190,6 +190,16 @@ export const site = {
     bookCall: { en: "Book a call", fr: "Réserver un appel" } as Translatable,
   },
 
+  // Project detail chrome labels
+  project: {
+    status: { en: "status", fr: "statut" } as Translatable,
+    role: { en: "role", fr: "rôle" } as Translatable,
+    visit: { en: "Visit site ↗", fr: "Voir le site ↗" } as Translatable,
+    github: { en: "View on GitHub ↗", fr: "Voir sur GitHub ↗" } as Translatable,
+    prev: { en: "prev", fr: "précédent" } as Translatable,
+    next: { en: "next", fr: "suivant" } as Translatable,
+  },
+
   footerNote: { en: "Built from scratch · no template", fr: "Codé sur mesure · sans template" } as Translatable,
 
   // Social links (Instagram once-ui placeholder removed; website added)
