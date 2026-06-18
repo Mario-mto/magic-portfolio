@@ -2,5 +2,5 @@
 .head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: var(--s5); }
 .viewport { overflow: hidden; padding-inline: var(--gutter); }
 .viewport.native { overflow-x: auto; scroll-snap-type: x mandatory; }
-.track { display: flex; gap: var(--s4); width: max-content; }
-.slide { width: clamp(280px, 70vw, 380px); scroll-snap-align: start; }
+.track { display: flex; gap: var(--s4); width: max-content; align-items: stretch; }
+.slide { width: clamp(280px, 70vw, 380px); scroll-snap-align: start; display: flex; }
