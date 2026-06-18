@@ -24,6 +24,8 @@ type Metadata = {
   metric?: string;
   featured?: boolean;
   order?: number;
+  title_fr?: string;
+  summary_fr?: string;
 };
 
 import { notFound } from "next/navigation";
@@ -59,6 +61,8 @@ function readMDXFile(filePath: string) {
     metric: data.metric || "",
     featured: data.featured ?? false,
     order: data.order ?? 0,
+    title_fr: data.title_fr || "",
+    summary_fr: data.summary_fr || "",
   };
 
   return { metadata, content };

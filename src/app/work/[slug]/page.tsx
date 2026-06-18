@@ -6,6 +6,7 @@ import { ProjectHero } from "@/components/project/ProjectHero";
 import { MetricsBar } from "@/components/project/MetricsBar";
 import { ImageCarousel } from "@/components/project/ImageCarousel";
 import { ProjectNav } from "@/components/project/ProjectNav";
+import { LangBody } from "@/components/project/LangBody";
 import { work } from "@/resources";
 
 export async function generateStaticParams() {
@@ -29,9 +30,10 @@ export default async function Project({ params }: { params: Promise<{ slug: stri
     <article>
       <ProjectHero project={project} />
       <MetricsBar project={project} />
-      <div className="container" style={{ maxWidth: "760px" }}>
-        <CustomMDX source={project.content} />
-      </div>
+      <LangBody
+        en={<div className="container" style={{ maxWidth: "760px" }}><CustomMDX source={project.content} /></div>}
+        fr={<div className="container" style={{ maxWidth: "760px" }}><CustomMDX source={project.contentFr} /></div>}
+      />
       <ImageCarousel images={project.images} title={project.title} />
       <ProjectNav prev={all[idx - 1]} next={all[idx + 1]} />
     </article>

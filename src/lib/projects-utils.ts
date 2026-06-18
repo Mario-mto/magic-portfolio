@@ -5,11 +5,14 @@ export type Badge = "deployed" | "live" | "research" | "design";
 export interface Project {
   slug: string;
   title: string;
+  titleFr: string;
   summary: string;
+  summaryFr: string;
   publishedAt: string;
   images: string[];
   link: string;
   content: string;
+  contentFr: string;
   team: { name: string; role: string; avatar: string; linkedIn: string }[];
   domain?: Domain;
   badge?: Badge;

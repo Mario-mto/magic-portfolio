@@ -9,11 +9,24 @@ export { sortByDate, filterByDomain, DOMAIN_LABELS } from "./projects-utils";
 const PROJECTS_PATH = ["src", "app", "work", "projects"];
 
 export function getProjects(): Project[] {
-  return getPosts(PROJECTS_PATH).map((p) => ({
+  const all = getPosts(PROJECTS_PATH);
+  const frBodies = new Map<string, string>();
+  const base: typeof all = [];
+  for (const p of all) {
+    if (p.slug.endsWith(".fr")) {
+      frBodies.set(p.slug.replace(/\.fr$/, ""), p.content);
+    } else {
+      base.push(p);
+    }
+  }
+  return base.map((p) => ({
     slug: p.slug,
     content: p.content,
+    contentFr: frBodies.get(p.slug) || p.content, // EN fallback when no FR body yet
     title: p.metadata.title,
+    titleFr: p.metadata.title_fr || p.metadata.title,
     summary: p.metadata.summary,
+    summaryFr: p.metadata.summary_fr || p.metadata.summary,
     publishedAt: p.metadata.publishedAt,
     images: p.metadata.images,
     link: p.metadata.link || "",
