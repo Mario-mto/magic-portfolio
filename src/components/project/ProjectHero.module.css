@@ -1,0 +1,7 @@
+.hero { padding-top: 140px; }
+.meta { display: flex; gap: var(--s4); align-items: center; margin-bottom: var(--s4); }
+.title { font-size: clamp(2rem, 6vw, 3.6rem); max-width: 16ch; }
+.summary { margin-top: var(--s4); max-width: 60ch; color: var(--text-dim); font-size: 1.05rem; }
+.cover { position: relative; aspect-ratio: 16/9; margin-top: var(--s6); border-radius: var(--r-lg);
+  overflow: hidden; border: 1px solid var(--border); }
+.img { object-fit: cover; }

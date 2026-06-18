@@ -1,0 +1,5 @@
+.bar { display: flex; flex-wrap: wrap; gap: var(--s6); align-items: center; padding: var(--s5) var(--gutter);
+  border-block: 1px solid var(--border); margin: var(--s7) auto; }
+.item { display: flex; flex-direction: column; gap: 4px; }
+.item strong { font-weight: 500; }
+.repo { margin-left: auto; color: var(--accent); font-family: var(--font-mono); font-size: 0.8rem; }

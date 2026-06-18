@@ -1,0 +1,4 @@
+.nav { display: flex; justify-content: space-between; gap: var(--s5); padding-block: var(--s9); }
+.link { display: flex; flex-direction: column; gap: 6px; color: var(--text-dim); }
+.link:hover { color: var(--accent); }
+.right { text-align: right; }
