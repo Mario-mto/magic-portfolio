@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useLang, tr } from "@/lib/i18n";
 import { site } from "@/resources/site";
 import { LangToggle } from "./LangToggle";
+import { LocalTime } from "./LocalTime";
 import styles from "./Header.module.css";
 
 export function Header() {
@@ -17,7 +18,7 @@ export function Header() {
       </nav>
       <span className={styles.right}>
         <LangToggle />
-        <span className={styles.status}><i />{tr(lang, site.person.availability)} · Montréal</span>
+        <span className={styles.status}><i />{tr(lang, site.person.availability)} · Montréal<LocalTime /></span>
       </span>
     </header>
   );
