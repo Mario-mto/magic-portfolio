@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./Header.module.css";
+import { LangToggle } from "./LangToggle";
 
 export function Header() {
   return (
@@ -10,7 +11,10 @@ export function Header() {
         <Link href="/about">02 About</Link>
         <Link href="/#contact">03 Contact</Link>
       </nav>
-      <span className={styles.status}><i />Available · Montréal</span>
+      <span className={styles.right}>
+        <LangToggle />
+        <span className={styles.status}><i />Available · Montréal</span>
+      </span>
     </header>
   );
 }

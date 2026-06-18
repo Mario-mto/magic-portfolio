@@ -6,6 +6,7 @@ import { MagneticCursor } from "@/components/layout/MagneticCursor";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { baseURL, home } from "@/resources";
+import { LangProvider } from "@/lib/i18n";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono", display: "swap" });
@@ -24,12 +25,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${jetbrainsMono.variable}`}>
       <body>
-        <SmoothScroll>
-          <MagneticCursor />
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </SmoothScroll>
+        <LangProvider>
+          <SmoothScroll>
+            <MagneticCursor />
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </SmoothScroll>
+        </LangProvider>
       </body>
     </html>
   );

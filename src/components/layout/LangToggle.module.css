@@ -1,0 +1,6 @@
+.toggle { display: inline-flex; align-items: center; gap: 5px; font-family: var(--font-mono);
+  font-size: 0.7rem; letter-spacing: 0.12em; }
+.toggle button { color: var(--text-faint); padding: 2px 2px; transition: color .2s; }
+.toggle button:hover { color: var(--text-dim); }
+.toggle button.on { color: var(--accent); }
+.sep { color: var(--text-faint); opacity: 0.5; }

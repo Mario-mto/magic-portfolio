@@ -12,4 +12,5 @@
 .nav a:hover { color: var(--accent); }
 .status { display: flex; align-items: center; gap: 7px; }
 .status i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+.right { display: flex; align-items: center; gap: 18px; }
 @media (max-width: 640px) { .nav { display: none; } }
