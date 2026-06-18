@@ -15,7 +15,7 @@ export default function About() {
         <Image src={person.avatar} alt={person.name} width={120} height={120} className={styles.avatar} />
         <div>
           <h1>{person.name}</h1>
-          <p className={styles.role}>{person.role} · {about.title.replace("About – ", "")}</p>
+          <p className={styles.role}>{person.role}</p>
           <p className={styles.bio}>{about.intro.description}</p>
         </div>
       </div>

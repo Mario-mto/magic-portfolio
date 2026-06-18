@@ -10,10 +10,14 @@ import { baseURL, home } from "@/resources";
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk", display: "swap" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono", display: "swap" });
 
+const ogImage = `/api/og/generate?title=${encodeURIComponent(home.title)}`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(baseURL),
   title: home.title,
   description: home.description,
+  openGraph: { title: home.title, description: home.description, type: "website", images: [ogImage] },
+  twitter: { card: "summary_large_image", title: home.title, description: home.description, images: [ogImage] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
