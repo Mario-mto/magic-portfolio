@@ -8,7 +8,7 @@ export function AboutIntro() {
   const { lang } = useLang();
   return (
     <div className={`container ${styles.intro}`}>
-      <Image src={site.person.avatar} alt={site.person.name} width={120} height={120} className={styles.avatar} />
+      <Image src={site.person.avatar} alt={site.person.name} width={132} height={132} quality={90} className={styles.avatar} />
       <div>
         <h1>{site.person.name}</h1>
         <p className={styles.role}>{tr(lang, site.person.role)} · {tr(lang, site.person.location)}</p>

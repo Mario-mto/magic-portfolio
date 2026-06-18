@@ -1,5 +1,6 @@
 .intro { display: flex; gap: var(--s6); align-items: flex-start; margin-bottom: var(--s8); flex-wrap: wrap; }
-.avatar { border-radius: 50%; border: 1px solid var(--border-strong); }
+.avatar { width: 132px; height: 132px; border-radius: 50%; border: 1px solid var(--border-strong);
+  object-fit: cover; object-position: center 30%; }
 .role { font-family: var(--font-mono); color: var(--accent); text-transform: uppercase; font-size: 0.8rem; margin: var(--s2) 0 var(--s4); }
 .bio { color: var(--text-dim); max-width: 62ch; line-height: 1.6; }
 .permit { color: var(--text-faint); margin-top: var(--s4); }
