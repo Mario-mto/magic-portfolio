@@ -1,4 +1,5 @@
 .badge { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-mono);
   text-transform: uppercase; font-size: 0.62rem; letter-spacing: 0.12em; color: var(--accent);
   border: 1px solid var(--border-strong); border-radius: 6px; padding: 4px 8px; }
-.badge i { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 7px var(--accent); }
+.badge span { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 7px var(--accent); flex-shrink: 0; }
+.dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 7px var(--accent); flex-shrink: 0; }

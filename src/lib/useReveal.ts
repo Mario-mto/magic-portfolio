@@ -11,7 +11,7 @@ export function useReveal<T extends HTMLElement>(stagger = 0.08) {
     if (!el) return;
     registerGsap();
     if (reduced) return; // visible by default via CSS
-    const targets = el.dataset.revealChildren ? el.children : [el];
+    const targets = el.dataset.revealChildren === "true" ? el.children : [el];
     const ctx = gsap.context(() => {
       gsap.from(targets, {
         y: 28, opacity: 0, duration: 0.8, ease: "expo.out", stagger,

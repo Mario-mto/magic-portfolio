@@ -14,10 +14,10 @@ export function Marquee({ items }: { items: string[] }) {
       gsap.to(track, { xPercent: -50, duration: 24, ease: "none", repeat: -1 });
     }, track);
     return () => ctx.revert();
-  }, [reduced]);
+  }, [reduced, items]);
   const doubled = [...items, ...items];
   return (
-    <div className={styles.wrap}>
+    <div className={styles.wrap} aria-label="Tech stack">
       <div ref={trackRef} className={styles.track}>
         {doubled.map((it, i) => <span key={i} className={styles.item}>{it}</span>)}
       </div>

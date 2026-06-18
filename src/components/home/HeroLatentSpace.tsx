@@ -109,7 +109,7 @@ export function HeroLatentSpace({ projects }: { projects: { slug: string; title:
         <p className={styles.sub}>{home.subline}</p>
         <Link href="/work" className={`mono ${styles.cue}`}>Scroll ↓</Link>
       </div>
-      <ul className={styles.srLinks}>
+      <ul className={styles.srLinks} aria-label="Projects">
         {projects.map((p) => (<li key={p.slug}><Link href={`/work/${p.slug}`}>{p.title}</Link></li>))}
       </ul>
     </section>

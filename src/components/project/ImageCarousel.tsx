@@ -1,10 +1,17 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./ImageCarousel.module.css";
 
 export function ImageCarousel({ images, title }: { images: string[]; title: string }) {
   const [open, setOpen] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(null); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
   const rest = images.slice(1);
   if (rest.length === 0) return null;
   return (

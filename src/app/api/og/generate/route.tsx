@@ -29,7 +29,7 @@ export async function GET(request: Request) {
         width: "100%",
         height: "100%",
         padding: "6rem",
-        background: "#151515",
+        background: "#070809",
       }}
     >
       <div
@@ -37,20 +37,30 @@ export async function GET(request: Request) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          gap: "4rem",
+          gap: "3rem",
           fontStyle: "normal",
           color: "white",
         }}
       >
         <span
           style={{
-            padding: "1rem",
+            fontSize: "1.6rem",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "#5eead4",
+            fontWeight: 600,
+          }}
+        >
+          Applied AI Engineer
+        </span>
+        <span
+          style={{
             fontSize: "6rem",
-            lineHeight: "8rem",
+            lineHeight: "7rem",
             letterSpacing: "-0.05em",
-            whiteSpace: "wrap",
-            textWrap: "balance",
+            whiteSpace: "pre-wrap",
             overflow: "hidden",
+            color: "white",
           }}
         >
           {title}
@@ -59,14 +69,15 @@ export async function GET(request: Request) {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "5rem",
+            gap: "3rem",
+            marginTop: "1rem",
           }}
         >
           <img
             src={baseURL + person.avatar}
             style={{
-              width: "12rem",
-              height: "12rem",
+              width: "10rem",
+              height: "10rem",
               objectFit: "cover",
               borderRadius: "100%",
             }}
@@ -75,26 +86,24 @@ export async function GET(request: Request) {
             style={{
               display: "flex",
               flexDirection: "column",
-              gap: "0.75rem",
+              gap: "0.5rem",
             }}
           >
             <span
               style={{
-                fontSize: "4.5rem",
-                lineHeight: "4.5rem",
-                whiteSpace: "pre-wrap",
-                textWrap: "balance",
+                fontSize: "3.5rem",
+                lineHeight: "4rem",
+                color: "white",
               }}
             >
               {person.name}
             </span>
             <span
               style={{
-                fontSize: "2.5rem",
+                fontSize: "2rem",
                 lineHeight: "2.5rem",
-                whiteSpace: "pre-wrap",
-                textWrap: "balance",
-                opacity: "0.6",
+                color: "#5eead4",
+                opacity: "0.85",
               }}
             >
               {person.role}

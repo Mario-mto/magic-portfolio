@@ -7,5 +7,5 @@ const LABELS: Record<BadgeType, string> = {
 
 export function Badge({ kind }: { kind?: BadgeType }) {
   if (!kind) return null;
-  return <span className={styles.badge}><i />{LABELS[kind]}</span>;
+  return <span className={styles.badge}><span aria-hidden="true" className={styles.dot} />{LABELS[kind]}</span>;
 }

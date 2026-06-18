@@ -19,6 +19,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
 h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.03em; line-height: 0.95; font-weight: 600; }
 
 .mono {
