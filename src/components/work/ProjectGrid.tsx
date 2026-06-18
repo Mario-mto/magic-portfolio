@@ -2,6 +2,8 @@
 import { useState, useRef, useLayoutEffect } from "react";
 import { registerGsap, gsap } from "@/lib/gsap";
 import { useReducedMotion } from "@/lib/useReducedMotion";
+import { useLang, tr } from "@/lib/i18n";
+import { site } from "@/resources/site";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectFilters } from "./ProjectFilters";
 import { filterByDomain, type Project, type Domain } from "@/lib/projects-utils";
@@ -12,6 +14,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
   const gridRef = useRef<HTMLDivElement>(null);
   const visible = filterByDomain(projects, domain);
   const reduced = useReducedMotion();
+  const { lang } = useLang();
 
   useLayoutEffect(() => {
     const grid = gridRef.current; if (!grid) return;
@@ -26,6 +29,7 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
 
   return (
     <div className="container">
+      <h1 className={styles.pageTitle}>{tr(lang, site.nav.work)}</h1>
       <ProjectFilters active={domain} onChange={setDomain} />
       <div ref={gridRef} className={styles.grid}>
         {visible.map((p) => <ProjectCard key={p.slug} project={p} />)}

@@ -9,7 +9,6 @@ export default function Work() {
   const projects = sortByDate(getProjects());
   return (
     <section style={{ paddingTop: "120px" }}>
-      <div className="container"><h1>Work</h1></div>
       <ProjectGrid projects={projects} />
     </section>
   );
