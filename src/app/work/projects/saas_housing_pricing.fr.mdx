@@ -1,0 +1,35 @@
+## Présentation
+
+Ce projet porte sur la conception et la livraison d'un moteur de tarification piloté par l'IA pour une plateforme SaaS immobilière.  
+L'objectif était d'aider les professionnels de l'immobilier à estimer des prix locatifs justes et compétitifs à partir des données, tout en gardant une solution déployable et facile à intégrer aux workflows existants.
+
+## Fonctionnalités clés
+
+- **Moteur de recommandation de prix**  
+  J'ai construit un modèle de régression supervisée pour estimer les prix locatifs à partir des caractéristiques de localisation, des signaux de quartier et des annonces historiques.
+
+- **Pipeline ML de bout en bout**  
+  J'ai mis en œuvre le prétraitement, le feature engineering, l'entraînement, l'optimisation par GridSearchCV et l'évaluation afin de garantir des résultats robustes et reproductibles.
+
+- **Livraison API-first**  
+  J'ai exposé les prédictions via un endpoint FastAPI afin que le moteur puisse être intégré aux outils du client (CRM / tableaux de bord internes).
+
+- **Sorties prêtes pour le métier**  
+  Je me suis concentré sur des sorties claires (prix recommandé + contexte) compréhensibles par des interlocuteurs non techniques.
+
+## Technologies utilisées
+
+- **Python**, **Pandas**, **NumPy**
+- **Scikit-learn**, **XGBoost**, **Random Forest**
+- **Seaborn**, **Matplotlib**
+- **FastAPI**, **Docker**
+
+## Défis et enseignements
+
+Un défi majeur a été d'équilibrer la performance et la confiance : le modèle devait offrir une forte précision, mais les recommandations devaient aussi rester cohérentes et explicables pour les utilisateurs métier.  
+La qualité des données a également été déterminante : la gestion des valeurs manquantes, la validation des entrées et la prévention des fuites de données ont eu un impact majeur sur la stabilité.
+
+## Résultats
+
+Le moteur de tarification a réduit l'effort de fixation manuelle des prix et amélioré la cohérence entre les annonces.  
+Sa conception modulaire permet des améliorations futures telles que le réentraînement, l'ajout de nouveaux signaux de quartier et l'intégration du retour utilisateur pour une itération continue.

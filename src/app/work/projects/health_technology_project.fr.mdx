@@ -1,0 +1,34 @@
+## Vue d'ensemble
+
+Ce projet visait à automatiser les mesures morphologiques à partir d'images médicales 3D à l'aide de Python.  
+L'objectif était de remplacer des mesures manuelles et chronophages par des workflows informatiques fiables et reproductibles, tout en conservant la validation par des experts grâce à une revue visuelle.
+
+## Fonctionnalités clés
+
+- **Extraction automatisée des mesures**  
+  Développement de scripts Python pour calculer des métriques telles que la longueur, la largeur, la circonférence et le volume à partir de segmentations 3D.
+
+- **Analyse de répétabilité et de reproductibilité**  
+  Mise en place de workflows d'analyse pour quantifier la cohérence des mesures sur plusieurs exécutions et sujets.
+
+- **Intégration d'outils pour la validation visuelle**  
+  Intégration de scripts à 3D Slicer pour visualiser les résultats, valider les bounding boxes et faciliter la revue par les experts.
+
+- **Sorties structurées pour l'analyse**  
+  Export de jeux de données propres, adaptés aux statistiques et au reporting en aval.
+
+## Technologies utilisées
+
+- **Python**, **NumPy**, **Pandas**
+- **Matplotlib**, **Seaborn**
+- **3D Slicer (API Python)**, **VTK**
+
+## Défis et enseignements
+
+Garantir la pertinence anatomique a nécessité une gestion rigoureuse des référentiels et une vérification visuelle systématique.  
+Ce projet a renforcé les bonnes pratiques autour d'un code Python robuste dans des contextes critiques pour la recherche : reproductibilité, traçabilité et boucles de validation.
+
+## Résultat
+
+L'automatisation a considérablement réduit le temps de mesure manuel tout en améliorant la cohérence et la transparence.  
+Le workflow passe à l'échelle sur des jeux de données plus volumineux et constitue une base solide pour de futures extensions telles que la modélisation statistique ou l'analyse basée sur le ML.
