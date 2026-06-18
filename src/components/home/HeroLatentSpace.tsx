@@ -107,8 +107,8 @@ export function HeroLatentSpace({ projects }: { projects: { slug: string; title:
           Designing practical <ScrambleText text="AI systems" as="span" className={styles.stroke} /> that ship.
         </h1>
         <p className={styles.sub}>{home.subline}</p>
-        <Link href="/work" className={`mono ${styles.cue}`}>Scroll ↓</Link>
       </div>
+      <Link href="/work" className={`mono ${styles.cue}`}>Scroll ↓</Link>
       <ul className={styles.srLinks} aria-label="Projects">
         {projects.map((p) => (<li key={p.slug}><Link href={`/work/${p.slug}`}>{p.title}</Link></li>))}
       </ul>
