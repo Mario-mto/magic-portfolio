@@ -168,7 +168,7 @@ export const site = {
       timeframe: "09/2021 — 10/2025",
     },
     {
-      degree: { en: "Master's — Health Technology Engineering", fr: "Maîtrise — Génie Technologie de la santé" },
+      degree: { en: "Master's — Software Engineering", fr: "Maîtrise — Génie Logiciel" },
       institution: { en: "École de Technologie Supérieure (ÉTS)", fr: "École de Technologie Supérieure (ÉTS)" },
       location: { en: "Montréal, QC, Canada", fr: "Montréal, QC, Canada" },
       timeframe: "09/2023 — 04/2025",
