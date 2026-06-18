@@ -1,5 +1,5 @@
-// Production domain — used for metadata/sitemap. TODO(owner): set the real domain.
-export const baseURL = "https://mario-montcho.com";
+// Production domain — used for metadata/sitemap/OG.
+export const baseURL = "https://mariomto.fr";
 
 export const routes: Record<string, boolean> = {
   "/": true,
