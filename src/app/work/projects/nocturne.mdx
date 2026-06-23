@@ -1,0 +1,77 @@
+---
+title: "NOCTURNE — Gotham After Dark"
+publishedAt: "2026-06-23"
+summary: "An immersive, single-page Batman experience — scroll-driven storytelling, a horizontal arsenal, canvas rain and hand-drawn SVG art, built as a real, deployable product."
+title_fr: "NOCTURNE — Gotham After Dark"
+summary_fr: "Une expérience Batman immersive en une seule page — narration au scroll, arsenal horizontal, pluie sur canvas et illustrations SVG faites main, livrée comme un vrai produit déployable."
+video: "/images/projects/nocturne/nocturne.mp4"
+images:
+  - "/images/projects/nocturne/nocturne.png"
+team:
+  - name: "Mario Montcho"
+    role: "Creative Front-End Developer"
+    avatar: "/images/moi.jpg"
+    linkedIn: "https://www.linkedin.com/in/mario-montcho-241598212/"
+domain: "frontend"
+badge: "design"
+metric: "GSAP · SVG · Canvas"
+featured: true
+order: 0
+---
+
+## Overview
+
+NOCTURNE — *Gotham After Dark* is an immersive, single-page Batman experience, built to compete for an Awwwards weekly pick. The brief I set myself: a landing page good enough to sit among Awwwards' picks of the week — dark, cinematic, heavy on motion, and a genuinely deployable product rather than a static mockup. No generic templates, no AI-template look.
+
+---
+
+## What I built
+
+A self-contained scroll experience. It opens on a "signal acquired" preloader, then drops you into a hero where the Bat-Signal is projected into the fog — a glowing halo, the emblem, and a soft beam washing down over the headline. Rain falls on a canvas layer, film grain sits over the whole page, and a magnetic custom cursor reacts to whatever you hover.
+
+From there it moves through five acts:
+
+- **Manifesto** — a quote that reveals word by word as you scroll.
+- **Arsenal** — a pinned section that scrolls sideways through blueprint-style schematics of the suit, the Batarang, the grapple gun, the Batmobile, and the cowl.
+- **Rogues Gallery** — each villain's threat file follows the cursor on hover.
+- **City** — counters that tick up over a parallax skyline.
+- **Finale** — you light the signal yourself, with a status readout that comes online.
+
+Every illustration is hand-built SVG — no stock images, no icon packs. The bat emblem, the skyline and the gear schematics are all drawn in code, which keeps the whole site down to a handful of files.
+
+---
+
+## How it's built
+
+Plain HTML, CSS and vanilla JavaScript — no framework, no build step. Motion runs on GSAP: ScrollTrigger for the scroll-driven sequences, ScrollSmoother for smooth scrolling and parallax, SplitText for the type reveals. The horizontal Arsenal uses GSAP's `containerAnimation`, so the sideways gallery stays tied to vertical scroll position. Typography pairs Big Shoulders Display with Archivo and JetBrains Mono — chosen to read like a Gotham case file instead of a default Google-Fonts combo.
+
+---
+
+## Production-ready — the part most landing pages skip
+
+After the visual work, I treated it like a product going to production:
+
+- **Accessibility** — keyboard focus styles, a skip link, screen-reader text for the hover-only content, real button state (`aria-pressed`, a live status region), and a full `prefers-reduced-motion` path that cuts the heavy motion for people who ask for it.
+- **Mobile** — a proper slide-in menu, tap fallbacks for the hover interactions, and parallax that still works on touch.
+- **Performance** — the canvas rain is batched and frame-capped, the expensive blur was trimmed, and animation loops pause when off-screen.
+- **Deployment** — subresource-integrity hashes on the CDN scripts, Open Graph and Twitter cards with a generated share image, a favicon, and a graceful fallback if a script fails to load.
+
+---
+
+## Review & outcome
+
+To catch what I'd miss on my own, I ran the finished build through a review across seven angles: design, motion, accessibility, performance, mobile, code correctness and deployability. It surfaced 52 issues; 37 held up after verification, and I fixed all 37 before calling it done.
+
+---
+
+## What this demonstrates
+
+- Art direction and UI design with a clear point of view
+- Animation engineering with GSAP — timelines, scroll-driven sequences, pinning, custom cursor, canvas
+- Clean front-end code without leaning on a framework
+- SVG illustration
+- Accessibility to WCAG standards
+- Performance tuning and responsive / mobile work
+- Shipping something deploy-ready, not just a good-looking demo
+
+**Stack:** HTML, CSS, JavaScript, GSAP (ScrollTrigger, ScrollSmoother, SplitText), SVG, Canvas. Zero build step — deploys to any static host.

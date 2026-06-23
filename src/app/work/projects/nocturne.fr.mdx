@@ -1,0 +1,56 @@
+## Présentation
+
+NOCTURNE — *Gotham After Dark* est une expérience Batman immersive, en une seule page, conçue pour viser une sélection hebdomadaire Awwwards. Le brief que je me suis fixé : une landing page assez aboutie pour figurer parmi les « picks of the week » d'Awwwards — sombre, cinématographique, riche en animation, et un vrai produit déployable plutôt qu'une maquette statique. Aucun template générique, aucun rendu « template IA ».
+
+---
+
+## Ce que j'ai construit
+
+Une expérience au scroll autonome. Elle s'ouvre sur un écran de chargement « signal acquired », puis bascule dans un hero où le Bat-Signal est projeté dans le brouillard — un halo lumineux, l'emblème, et un faisceau diffus qui descend sur le titre. La pluie tombe sur une couche canvas, un grain de film recouvre toute la page, et un curseur personnalisé magnétique réagit à tout ce que l'on survole.
+
+L'expérience se déroule ensuite en cinq actes :
+
+- **Manifeste** — une citation qui se révèle mot à mot au scroll.
+- **Arsenal** — une section épinglée qui défile horizontalement à travers des schémas façon plans techniques : la combinaison, le Batarang, le grappin, la Batmobile et le masque.
+- **Galerie des vilains** — la fiche de menace de chaque ennemi suit le curseur au survol.
+- **Ville** — des compteurs qui s'incrémentent au-dessus d'une skyline en parallaxe.
+- **Final** — on allume soi-même le signal, avec un affichage d'état qui s'active.
+
+Chaque illustration est un SVG fait main — aucune image de stock, aucun pack d'icônes. L'emblème de la chauve-souris, la skyline et les schémas d'équipement sont tous dessinés en code, ce qui réduit l'ensemble du site à une poignée de fichiers.
+
+---
+
+## Comment c'est construit
+
+Du HTML, du CSS et du JavaScript vanilla — aucun framework, aucune étape de build. L'animation repose sur GSAP : ScrollTrigger pour les séquences pilotées au scroll, ScrollSmoother pour le défilement fluide et la parallaxe, SplitText pour les révélations de texte. L'Arsenal horizontal utilise le `containerAnimation` de GSAP, afin que la galerie latérale reste liée à la position de défilement verticale. La typographie associe Big Shoulders Display à Archivo et JetBrains Mono — choisies pour évoquer un dossier d'enquête de Gotham plutôt qu'une combinaison Google Fonts par défaut.
+
+---
+
+## Prêt pour la production — la partie que la plupart des landing pages zappent
+
+Après le travail visuel, je l'ai traitée comme un produit destiné à la production :
+
+- **Accessibilité** — styles de focus clavier, lien d'évitement, textes pour lecteurs d'écran sur les contenus accessibles uniquement au survol, véritable état de bouton (`aria-pressed`, région de statut « live »), et un parcours `prefers-reduced-motion` complet qui coupe les animations lourdes pour ceux qui le demandent.
+- **Mobile** — un vrai menu coulissant, des solutions de repli au tap pour les interactions au survol, et une parallaxe qui fonctionne toujours au toucher.
+- **Performance** — la pluie en canvas est regroupée (batch) et limitée en fréquence d'images, le flou coûteux a été allégé, et les boucles d'animation se mettent en pause hors écran.
+- **Déploiement** — hashes d'intégrité (SRI) sur les scripts CDN, cartes Open Graph et Twitter avec une image de partage générée, un favicon, et un repli gracieux si un script échoue à charger.
+
+---
+
+## Revue & résultat
+
+Pour repérer ce qui m'aurait échappé seul, j'ai soumis la version finale à une revue selon sept angles : design, animation, accessibilité, performance, mobile, justesse du code et déployabilité. Elle a fait remonter 52 problèmes ; 37 se sont confirmés après vérification, et je les ai tous corrigés avant de considérer le projet terminé.
+
+---
+
+## Ce que ça démontre
+
+- Direction artistique et design d'UI avec un parti pris clair
+- Ingénierie de l'animation avec GSAP — timelines, séquences pilotées au scroll, pinning, curseur personnalisé, canvas
+- Code front-end propre, sans s'appuyer sur un framework
+- Illustration SVG
+- Accessibilité aux standards WCAG
+- Optimisation des performances et travail responsive / mobile
+- Livrer quelque chose de prêt à déployer, pas juste une jolie démo
+
+**Stack :** HTML, CSS, JavaScript, GSAP (ScrollTrigger, ScrollSmoother, SplitText), SVG, Canvas. Zéro étape de build — se déploie sur n'importe quel hébergeur statique.

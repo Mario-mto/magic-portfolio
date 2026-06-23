@@ -21,12 +21,14 @@ describe("projects logic", () => {
 import { getProjects } from "./projects";
 
 describe("getProjects frontmatter", () => {
-  it("reads domain + badge for each of the 4 projects", () => {
+  it("reads domain + badge + video across projects", () => {
     const bySlug = Object.fromEntries(getProjects().map((p) => [p.slug, p]));
     expect(bySlug["saas_housing_pricing"]?.domain).toBe("ml");
     expect(bySlug["saas_housing_pricing"]?.badge).toBe("deployed");
     expect(bySlug["health_technology_project"]?.domain).toBe("medical");
     expect(bySlug["menu_optimizer"]?.badge).toBe("live");
     expect(bySlug["sites"]?.domain).toBe("frontend");
+    expect(bySlug["nocturne"]?.domain).toBe("frontend");
+    expect(bySlug["nocturne"]?.video).toBe("/images/projects/nocturne/nocturne.mp4");
   });
 });
