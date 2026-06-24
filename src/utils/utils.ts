@@ -22,6 +22,7 @@ type Metadata = {
   domain?: "ml" | "medical" | "saas" | "frontend";
   badge?: "deployed" | "live" | "research" | "design";
   metric?: string;
+  video?: string;
   featured?: boolean;
   order?: number;
   title_fr?: string;
@@ -59,6 +60,7 @@ function readMDXFile(filePath: string) {
     domain: data.domain,
     badge: data.badge,
     metric: data.metric || "",
+    video: data.video || "",
     featured: data.featured ?? false,
     order: data.order ?? 0,
     title_fr: data.title_fr || "",

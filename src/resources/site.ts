@@ -196,6 +196,8 @@ export const site = {
     role: { en: "role", fr: "rôle" } as Translatable,
     visit: { en: "Visit site ↗", fr: "Voir le site ↗" } as Translatable,
     github: { en: "View on GitHub ↗", fr: "Voir sur GitHub ↗" } as Translatable,
+    playVideo: { en: "Play", fr: "Lecture" } as Translatable,
+    pauseVideo: { en: "Pause", fr: "Pause" } as Translatable,
     prev: { en: "prev", fr: "précédent" } as Translatable,
     next: { en: "next", fr: "suivant" } as Translatable,
   },

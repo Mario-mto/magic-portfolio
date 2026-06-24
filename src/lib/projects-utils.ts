@@ -17,6 +17,7 @@ export interface Project {
   domain?: Domain;
   badge?: Badge;
   metric?: string;
+  video?: string;
 }
 
 export function sortByDate(list: Project[]): Project[] {

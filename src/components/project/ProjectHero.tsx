@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useLang } from "@/lib/i18n";
 import { Badge } from "@/components/ui/Badge";
 import { formatDate } from "@/utils/formatDate";
+import { HeroVideo } from "./HeroVideo";
 import type { Project } from "@/lib/projects-utils";
 import styles from "./ProjectHero.module.css";
 
@@ -20,10 +21,14 @@ export function ProjectHero({ project }: { project: Project }) {
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.summary}>{summary}</p>
       </div>
-      {project.images[0] && (
-        <div className={styles.cover}>
-          <Image src={project.images[0]} alt={title} fill priority sizes="100vw" className={styles.img} />
-        </div>
+      {project.video ? (
+        <HeroVideo src={project.video} poster={project.images[0]} title={title} />
+      ) : (
+        project.images[0] && (
+          <div className={styles.cover}>
+            <Image src={project.images[0]} alt={title} fill priority sizes="100vw" className={styles.img} />
+          </div>
+        )
       )}
     </header>
   );

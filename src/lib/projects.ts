@@ -34,5 +34,6 @@ export function getProjects(): Project[] {
     domain: p.metadata.domain,
     badge: p.metadata.badge,
     metric: p.metadata.metric,
+    video: p.metadata.video,
   }));
 }
